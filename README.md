@@ -150,6 +150,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Contributing
 
+[![GitHub][github]][github-url]
+
 If you have a suggestion that would make this better, please fork the repo and
 create a pull request.
 
