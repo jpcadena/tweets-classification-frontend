@@ -15,10 +15,10 @@ export class AuthService {
 
     /**
      * Login
-     * Login with OAuth2 authentication using request form.
+     * Endpoint to handle user login with OAuth2 authentication using
+ * request form.
  * ## Parameter:
- * - `user:` **Object from request body with username and
- * password as DI**
+ * - `user:` **Request body with username and password**
  * - `type:` **OAuth2PasswordRequestForm**
  * ## Response:
  * - `return:` **Token information with access token, its type and
@@ -44,9 +44,9 @@ formData: Body_auth_login,
 
     /**
      * Test Token
-     * Test access token.
+     * Endpoint to test the validity of an access token.
  * ## Response:
- * - `return:` **User instance**
+ * - `return:` **The authenticated user instance**
  * - `rtype:` **UserAuth**
      * @returns UserAuth Successful Response
      * @throws ApiError
@@ -60,7 +60,7 @@ formData: Body_auth_login,
 
     /**
      * Recover Password
-     * Recover password.
+     * Endpoint to handle password recovery.
  * ## Parameter:
  * - `email:` **Path parameter that references the email used to recover
  * the password**
@@ -89,7 +89,7 @@ email: string,
 
     /**
      * Reset Password
-     * Reset password.
+     * Endpoint to handle password reset.
  * ## Parameter:
  * - `token_reset_password:` **Body Object with token and new password**
  * - `type:` **TokenResetPassword**

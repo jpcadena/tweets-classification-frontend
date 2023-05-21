@@ -3,8 +3,7 @@
 /* eslint-disable */
 
 /**
- * Response class for creating User that inherits from UserID and
- * UserBase.
+ * Schema for the response when creating a User.
  */
 export type UserCreateResponse = {
     /**

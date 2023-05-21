@@ -5,7 +5,7 @@
 import type { Gender } from './Gender';
 
 /**
- * Request class for updating User based on Pydantic Base Model.
+ * Schema for updating a User record.
  */
 export type UserUpdate = {
     /**

@@ -3,8 +3,7 @@
 /* eslint-disable */
 
 /**
- * Model class that inherits from ModelCreatedAt, ModelCreate and
- * ModelID.
+ * Schema for representing a Model.
  */
 export type Model = {
     /**

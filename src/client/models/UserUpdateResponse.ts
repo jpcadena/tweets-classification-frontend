@@ -5,8 +5,7 @@
 import type { Gender } from './Gender';
 
 /**
- * Response class for updating User that inherits from UserInDB,
- * UserOptional, UserPassword, UserName and UserAuth.
+ * Schema for the response when updating a User.
  */
 export type UserUpdateResponse = {
     /**

@@ -11,7 +11,7 @@ export class DefaultService {
 
     /**
      * Welcome Message
-     * Function to retrieve homepage.
+     * Endpoint function for the base URL ('/') of the API application.
  * ## Response:
  * - `return:` **Welcome message**
  * - `rtype:` **Msg**

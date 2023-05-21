@@ -5,8 +5,7 @@
 import type { Model } from './Model';
 
 /**
- * Analysis class that inherits from AnalysisId, AnalysisBase and
- * AnalysisTarget.
+ * Schema for representing an Analysis.
  */
 export type Analysis = {
     /**

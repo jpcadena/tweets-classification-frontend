@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 /**
- * Base class for Messages.
+ * Schema for representing a message.
  */
 export type Msg = {
     /**

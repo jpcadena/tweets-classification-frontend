@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 /**
- * Gender class that inherits from built-in Enum
+ * Enum representing different gender options
  */
 export enum Gender {
     MALE = 'male',

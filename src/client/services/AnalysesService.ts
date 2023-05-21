@@ -11,15 +11,15 @@ export class AnalysesService {
 
     /**
      * Create Analysis
-     * Create a new analysis into the system.
- * - :param tweet_id: Path Parameter that identifies the tweet to be
- * analyzed
- * - :type tweet_id: PositiveInt
- * - :return: Analysis created with id, tweet_id, analysis_name, accuracy,
+     * Creates a sentiment analysis for a tweet specified by its ID.
+ * - `:param tweet_id:` **Path Parameter that identifies the tweet to be
+ * analyzed**
+ * - `:type tweet_id:` **PositiveInt**
+ * - `:return:` **Analysis created with id, tweet_id, analysis_name, accuracy,
  * precision, recall, f1_score, roc_auc, computing_time, relationship
- * with Analysis: analysis_id and its creation timestamp
- * - :rtype: Analysis
-     * @param tweetId Tweet ID to predict sentiment
+ * with Analysis: analysis_id and its creation timestamp**
+ * - `:rtype:` **Analysis**
+     * @param tweetId ID of the tweet to be analysed
      * @returns Analysis Successful Response
      * @throws ApiError
      */
@@ -40,18 +40,19 @@ tweetId: number,
 
     /**
      * Create Multiple Analysis
-     * Create multiple analyses into the system.
- * - :param username: Path Parameter that identifies username to fetch
- * tweets
- * - :param number_tweets: Query parameter for the quantity of recent
- * tweets to analyse for the given user
- * - :type number_tweets: PositiveInt
- * - :return: Analysis created with id, tweet_id, analysis_name, accuracy,
+     * Creates sentiment analyses for multiple tweets of a specified
+ * Twitter user.
+ * - `:param username:` **Path Parameter that identifies Twitter
+ * username whose tweets are to be analysed**
+ * - `:param number_tweets:` **Query parameter for the quantity of recent
+ * tweets to analyse for the given user**
+ * - `:type number_tweets:` **PositiveInt**
+ * - `:return:` **Analysis created with id, tweet_id, analysis_name, accuracy,
  * precision, recall, f1_score, roc_auc, computing_time, relationship
- * with Analysis: analysis_id and its creation timestamp
- * - :rtype: list[Analysis]
-     * @param username Username to fetch tweets for analysis
-     * @param numberTweets Quantity of recent tweets to analyse for the given user
+ * with Analysis: analysis_id and its creation timestamp**
+ * - `:rtype:` **list[Analysis]**
+     * @param username Username whose tweets are to be analysed
+     * @param numberTweets Number of recent tweets to be analysed for the user
      * @returns Analysis Successful Response
      * @throws ApiError
      */
@@ -76,14 +77,14 @@ numberTweets: number,
 
     /**
      * Get Analysis
-     * Search for specific Analysis by ID from the system.
- * - :param analysis_id: Path Parameter of Analysis ID to search
- * - :type analysis_id: PydanticObjectId
- * - :return: Found Analysis from logged-in user with id, tweet_id,
+     * Retrieves a specific Analysis by its ID.
+ * - `:param analysis_id:` **Path Parameter of Analysis ID to search**
+ * - `:type analysis_id:` **PydanticObjectId**
+ * - `:return:` **Found Analysis from logged-in user with id, tweet_id,
  * analysis_name, accuracy, precision, recall, f1_score, roc_auc,
- * computing_time, analysis_id and its creation timestamp
- * - :rtype: Analysis
-     * @param analysisId ID of the AnalysisCreate to searched
+ * computing_time, analysis_id and its creation timestamp**
+ * - `:rtype:` **Analysis**
+     * @param analysisId ID of the Analysis to be retrieved
      * @returns Analysis Successful Response
      * @throws ApiError
      */
@@ -104,17 +105,17 @@ analysisId: number,
 
     /**
      * Get Analyses
-     * Retrieve all analyses from the system.
- * - :param skip: Offset from where to start returning analyses
- * - :type skip: NonNegativeInt
- * - :param limit: Limit the number of results from query
- * - :type limit: PositiveInt
- * - :return: All analyses from logged-in user with id, tweet_id,
+     * Retrieves all Analyses, with pagination.
+ * - `:param skip:` **Number of analyses to skip**
+ * - `:type skip:` **NonNegativeInt**
+ * - `:param limit:` **Maximum number of analyses to return**
+ * - `:type limit:` **PositiveInt**
+ * - `:return:` **All analyses from logged-in user with id, tweet_id,
  * analysis_name, accuracy, precision, recall, f1_score, roc_auc,
- * computing_time, analysis_id and its creation timestamp
- * - :rtype: list[Analysis]
-     * @param skip Skip users
-     * @param limit Limit pagination
+ * computing_time, analysis_id and its creation timestamp**
+ * - `:rtype:` **list[Analysis]**
+     * @param skip Number of analyses to skip
+     * @param limit Maximum number of analyses to return
      * @returns Analysis Successful Response
      * @throws ApiError
      */

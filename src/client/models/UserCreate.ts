@@ -5,8 +5,7 @@
 import type { Gender } from './Gender';
 
 /**
- * Request class for creating User that inherits from UserOptional
- * and UserBase.
+ * Schema for creating a User record.
  */
 export type UserCreate = {
     /**

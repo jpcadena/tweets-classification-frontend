@@ -6,8 +6,7 @@ import type { Analysis } from './Analysis';
 import type { Gender } from './Gender';
 
 /**
- * Response for User class that inherits from UserRelationship,
- * UserInDB, UserOptional, UserCreateResponse.
+ * Schema for the response when retrieving a User.
  */
 export type UserResponse = {
     /**

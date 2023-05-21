@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 /**
- * Class for creating Model that inherits from ModelBase.
+ * Schema for creating a Model record
  */
 export type ModelCreate = {
     /**

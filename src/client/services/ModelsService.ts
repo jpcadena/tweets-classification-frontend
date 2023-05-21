@@ -12,17 +12,17 @@ export class ModelsService {
 
     /**
      * Get Models
-     * Retrieve all models from the system.
- * - :param skip: Offset from where to start returning models
- * - :type skip: NonNegativeInt
- * - :param limit: Limit the number of results from query
- * - :type limit: PositiveInt
- * - :return: All models from logged-in user with id, tweet_id,
+     * Retrieves all Models, with pagination.
+ * - `:param skip:` **Number of models to skip**
+ * - `:type skip:` **NonNegativeInt**
+ * - `:param limit:` **Maximum number of models to return**
+ * - `:type limit:` **PositiveInt**
+ * - `:return:` **All models from logged-in user with id, tweet_id,
  * model_name, accuracy, precision, recall, f1_score, roc_auc,
- * computing_time, analysis_id and its creation timestamp
- * - :rtype: list[Model]
-     * @param skip Skip users
-     * @param limit Limit pagination
+ * computing_time, analysis_id and its creation timestamp**
+ * - `:rtype:` **list[Model]**
+     * @param skip Number of models to skip
+     * @param limit Maximum number of models to return
      * @returns Model Successful Response
      * @throws ApiError
      */
@@ -46,14 +46,14 @@ limit: number = 100,
     /**
      * Create Model
      * Create a new model into the system.
- * - :param model: Body Object with tweet_id, model_name, accuracy,
+ * - `:param model:` **Body Object with tweet_id, model_name, accuracy,
  * precision, recall, f1_score, roc_auc, computing_time and
- * relationship with Analysis: analysis_id (OPTIONAL)
- * - :type model: ModelCreate
- * - :return: Model created with id, tweet_id, model_name, accuracy,
+ * relationship with Analysis: analysis_id (OPTIONAL)**
+ * - `:type model:` **ModelCreate**
+ * - `:return:` **Model created with id, tweet_id, model_name, accuracy,
  * precision, recall, f1_score, roc_auc, computing_time, relationship
- * with Analysis: analysis_id and its creation timestamp
- * - :rtype: Model
+ * with Analysis: analysis_id and its creation timestamp**
+ * - `:rtype:` **Model**
      * @param requestBody 
      * @returns Model Successful Response
      * @throws ApiError
@@ -74,13 +74,13 @@ requestBody: ModelCreate,
 
     /**
      * Get Model
-     * Search for specific Model by ID from the system.
- * - :param model_id: Path Parameter of Model ID to search
- * - :type model_id: PositiveInt
- * - :return: Found Model from logged-in user with id, tweet_id,
+     * Retrieves a specific Model by its ID.
+ * - `:param model_id:` **Path Parameter of Model ID to be retrieved**
+ * - `:type model_id:` **PositiveInt**
+ * - `:return:` **Found Model from logged-in user with id, tweet_id,
  * model_name, accuracy, precision, recall, f1_score, roc_auc,
- * computing_time, analysis_id and its creation timestamp
- * - :rtype: Model
+ * computing_time, analysis_id and its creation timestamp**
+ * - `:rtype:` **Model**
      * @param modelId ID of the Model to searched
      * @returns Model Successful Response
      * @throws ApiError
