@@ -6,8 +6,8 @@
  * Schema for representing a message.
  */
 export type Msg = {
-    /**
-     * Message to display
-     */
-    msg: string;
+  /**
+   * Message to display
+   */
+  msg: string;
 };

@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm run precommit
+npx lint-staged
+npm test && npx eslint 'src/**/*.{js,jsx,ts,tsx}' --fix && npx prettier --write .
+npx lint-staged

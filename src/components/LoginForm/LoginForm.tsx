@@ -39,7 +39,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
           id="username"
           type="text"
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={e => setUsername(e.target.value)}
         />
       </div>
       <div>
@@ -48,7 +48,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
           id="password"
           type="password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={e => setPassword(e.target.value)}
         />
       </div>
       <button type="submit">Login</button>

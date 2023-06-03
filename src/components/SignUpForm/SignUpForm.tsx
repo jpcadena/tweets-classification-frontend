@@ -39,12 +39,40 @@ export const SignUpForm: React.FC<SignUpFormProps> = ({ onSignUpSuccess }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" />
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
-      <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="First Name" />
-      <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Last Name" />
-      <select value={gender} onChange={(e) => setGender(e.target.value as Gender)}>
+      <input
+        type="text"
+        value={username}
+        onChange={e => setUsername(e.target.value)}
+        placeholder="Username"
+      />
+      <input
+        type="email"
+        value={email}
+        onChange={e => setEmail(e.target.value)}
+        placeholder="Email"
+      />
+      <input
+        type="password"
+        value={password}
+        onChange={e => setPassword(e.target.value)}
+        placeholder="Password"
+      />
+      <input
+        type="text"
+        value={firstName}
+        onChange={e => setFirstName(e.target.value)}
+        placeholder="First Name"
+      />
+      <input
+        type="text"
+        value={lastName}
+        onChange={e => setLastName(e.target.value)}
+        placeholder="Last Name"
+      />
+      <select
+        value={gender}
+        onChange={e => setGender(e.target.value as Gender)}
+      >
         <option value="">Select Gender</option>
         <option value={Gender.MALE}>Male</option>
         <option value={Gender.FEMALE}>Female</option>
